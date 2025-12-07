@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Fripy - منصة تعليمية تفاعلية للأطفال / Interactive learning platform for children" />
+  <title>Fripy - يلا نبدأ ننشط عقلنا!</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <div class="nav-logo">
+        <img src="assets/images/fripy/fripy-main.png" alt="Fripy" />
+        <span>فريبي / Fripy</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">الرئيسية / Home</a></li>
+        <li>
+          <a href="pages/progress.html" class="nav-link">إنجازاتي / Progress</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container section">
+    <!-- Hero Section with Fripy -->
+    <section class="hero" style="text-align: center; margin-bottom: 60px">
+      <div id="fripy-character" style="margin-bottom: 30px; display: inline-block">
+        <img src="assets/images/fripy/fripy-main.png" alt="Fripy Character" style="
+              width: 200px;
+              height: auto;
+              filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.15));
+            " />
+      </div>
+
+      <h1 id="fripy-greeting" class="section-title" style="font-size: 2.5rem">
+        يلا نبدأ ننشط عقلنا!
+      </h1>
+
+      <p class="section-subtitle">مع فريبي، كل يوم مغامرة جديدة! 🚀</p>
+
+      <!-- Quick Stats -->
+      <div class="stats-grid" style="margin-top: 40px">
+        <div class="stat-card slide-up stagger-1">
+          <span class="stat-value" id="stat-videos">0</span>
+          <span class="stat-label">فيديوهات / Videos</span>
+        </div>
+
+        <div class="stat-card slide-up stagger-2">
+          <span class="stat-value" id="stat-streak">0</span>
+          <span class="stat-label">يوم متصل / Day Streak 🔥</span>
+        </div>
+
+        <div class="stat-card slide-up stagger-3">
+          <span class="stat-value" id="stat-badges">0</span>
+          <span class="stat-label">شارات / Badges 🏆</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Sections -->
+    <div class="section-header">
+      <h2 class="section-title">اختر مغامرتك / Choose Your Adventure</h2>
+      <div class="section-decoration"></div>
+    </div>
+
+    <div class="grid grid-2">
+      <!-- Reflexes Hub -->
+      <div class="card card-clickable hover-lift slide-up stagger-1" data-navigate="pages/reflexes/index.html">
+        <div class="card-header">
+          <div class="card-icon" style="background: var(--gradient-primary)">
+            ⚡
+          </div>
+          <h3 class="card-title">الانعكاسات<br />Reflexes Hub</h3>
+        </div>
+        <div class="card-body">
+          <p>20 كورس لتطوير الحركة وسرعة رد الفعل مع فريبي!</p>
+          <p style="font-size: 0.9rem; color: var(--color-gray-500)">
+            20 courses to develop movement and reaction speed
+          </p>
+
+          <!-- Progress Bar -->
+          <div class="progress-container" style="margin-top: 20px">
+            <div class="progress-label">
+              <span>التقدم / Progress</span>
+              <span id="reflexes-percent">0%</span>
+            </div>
+            <div class="progress-bar" id="progress-reflexes">
+              <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="progress-fripy">
+              <div class="fripy-indicator" style="left: 0%">🐻</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learning Zone - Arabic -->
+      <div class="card card-clickable hover-lift slide-up stagger-2" data-navigate="pages/reflexes/arabic_view.html">
+        <div class="card-header">
+          <div class="card-icon" style="background: var(--gradient-warm)">
+            📚
+          </div>
+          <h3 class="card-title">تعلم العربية<br />Learn Arabic</h3>
+        </div>
+        <div class="card-body">
+          <p>تعلم الحروف، الكلمات، والنطق الصحيح بطريقة ممتعة</p>
+          <p style="font-size: 0.9rem; color: var(--color-gray-500)">
+            Learn letters, words, and pronunciation in a fun way
+          </p>
+
+          <!-- Progress Bar -->
+          <div class="progress-container" style="margin-top: 20px">
+            <div class="progress-label">
+              <span>التقدم / Progress</span>
+              <span id="arabic-percent">0%</span>
+            </div>
+            <div class="progress-bar" id="progress-arabic">
+              <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="progress-fripy">
+              <div class="fripy-indicator" style="left: 0%">🐻</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learning Zone - English -->
+      <div class="card card-clickable hover-lift slide-up stagger-3" data-navigate="pages/learning/english.html">
+        <div class="card-header">
+          <div class="card-icon" style="background: var(--gradient-cool)">
+            🌍
+          </div>
+          <h3 class="card-title">تعلم الإنجليزية<br />Learn English</h3>
+        </div>
+        <div class="card-body">
+          <p>ابدأ رحلتك مع اللغة الإنجليزية - ABC وأكثر!</p>
+          <p style="font-size: 0.9rem; color: var(--color-gray-500)">
+            Start your English journey - ABC and more!
+          </p>
+
+          <!-- Progress Bar -->
+          <div class="progress-container" style="margin-top: 20px">
+            <div class="progress-label">
+              <span>التقدم / Progress</span>
+              <span id="english-percent">0%</span>
+            </div>
+            <div class="progress-bar" id="progress-english">
+              <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="progress-fripy">
+              <div class="fripy-indicator" style="left: 0%">🐻</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Play Zone -->
+      <div class="card card-clickable hover-lift slide-up stagger-4" data-navigate="pages/play-zone.html">
+        <div class="card-header">
+          <div class="card-icon" style="background: linear-gradient(135deg, #ec4899 0%, #a855f7 100%);">
+            🎮
+          </div>
+          <h3 class="card-title">منطقة اللعب<br />Play Zone</h3>
+        </div>
+        <div class="card-body">
+          <p>ألعاب تفاعلية ممتعة لتطوير المهارات! العب الآن!</p>
+          <p style="font-size: 0.9rem; color: var(--color-gray-500)">
+            Fun interactive games to develop skills! Play Now!
+          </p>
+
+          <div style="margin-top: 20px">
+            <span class="badge badge-new" style="background: var(--color-success);">العب الآن / Play Now</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Motivational Section -->
+    <section style="margin-top: 60px; text-align: center">
+      <div class="card" style="
+            background: var(--gradient-rainbow);
+            color: white;
+            max-width: 600px;
+            margin: 0 auto;
+          ">
+        <h3 style="color: white; font-size: 1.5rem; margin-bottom: 15px">
+          💪 نصيحة فريبي اليوم
+        </h3>
+        <p style="color: white; font-size: 1.1rem; line-height: 1.8">
+          "الاستمرار هو السر! حتى لو تمرين واحد كل يوم، أنت بتتقدم!"
+        </p>
+        <p style="
+              color: rgba(255, 255, 255, 0.9);
+              font-size: 1rem;
+              margin-top: 10px;
+            ">
+          "Consistency is the secret! Even one exercise a day means progress!"
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer style="
+        text-align: center;
+        padding: 40px 20px;
+        color: var(--color-gray-600);
+        margin-top: 60px;
+      ">
+    <p style="font-family: var(--font-heading); font-size: 1.1rem">
+      مع الحب من فريبي 🐻💜
+    </p>
+    <p style="font-size: 0.9rem; margin-top: 5px">Made with love by Fripy</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/utils.js"></script>
+  <script src="js/fripy-character.js"></script>
+  <script src="js/progress-tracker.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Update progress percentages -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const stats = progressTracker.getStats();
+
+      // Update percentage labels
+      document.getElementById("reflexes-percent").textContent =
+        stats.reflexProgress + "%";
+      document.getElementById("arabic-percent").textContent =
+        stats.arabicProgress + "%";
+      document.getElementById("english-percent").textContent =
+        stats.englishProgress + "%";
+    });
+  </script>
+</body>
+
+</html>
